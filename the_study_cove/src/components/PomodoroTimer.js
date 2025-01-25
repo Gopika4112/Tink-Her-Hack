@@ -5,6 +5,11 @@ const PomodoroTimer = () => {
     const [isActive, setIsActive] = useState(false);
     const [timeLeft, setTimeLeft] = useState(25 * 60); // Default work time: 25 minutes
     const [isBreak, setIsBreak] = useState(false);
+    const [studyTime, setStudyTime]=useState(()=>{
+        const savedTime=JSON.parse(localStorage.getItem("studyTimeToday"));
+        const today=new Date().toISOString().split("T")[0];
+        return savedTime?.date===today?savedTime.time:0;
+    })
 
     // State to hold custom work and break durations
     const [workDuration, setWorkDuration] = useState('25'); // Work duration as string to handle backspace
@@ -20,6 +25,7 @@ const PomodoroTimer = () => {
         setIsActive(false);
         setTimeLeft(parseInt(workDuration) * 60); // Reset to work duration
         setIsBreak(false); // Reset to work session
+        saveStudyTime(studyTime);
     };
 
     // Handle input changes for work and break durations
@@ -51,6 +57,13 @@ const PomodoroTimer = () => {
                         setIsBreak(!isBreak);
                         return isBreak ? parseInt(workDuration) * 60 : parseInt(breakDuration) * 60;
                     }
+                    if(!isBreak){
+                        setStudyTime((prevStudyTime)=>{
+                            const updatedTime=prevStudyTime+1;
+                            saveStudyTime(updatedTime);
+                            return updatedTime;
+                        });
+                    }
                     return prevTime - 1;
                 });
             }, 1000);
@@ -66,6 +79,10 @@ const PomodoroTimer = () => {
         const minutes = Math.floor(timeInSeconds / 60);
         const seconds = timeInSeconds % 60;
         return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    };
+    const saveStudyTime=(time)=>{
+        const today=new Date().toISOString().split("T")[0];
+        localStorage.setItem("studyTimeToday",JSON.stringify({date:today, time}));
     };
 
     return (
