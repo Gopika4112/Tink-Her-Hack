@@ -36,6 +36,7 @@ const DailyQuote = () => {
   }, [quotes]); // Effect depends on the quotes array
 
   return (
+    
     <div
       style={{
         maxWidth: "400px",
@@ -48,7 +49,6 @@ const DailyQuote = () => {
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
       }}
     >
-      <h2 style={{ fontSize: "24px", marginBottom: "20px" }}>Motivational Quote</h2>
       <p
         style={{
           fontSize: "18px",

@@ -10,8 +10,7 @@
     background-color: #000000;
     color: #8bc0bc;
   }
-  
-  /* Main study room container */
+
   .container {
     display: flex;
     align-items: flex-start;
@@ -19,7 +18,7 @@
     max-width: 100%;
     margin: 0;
   }
-  /* Sidebar - To-Do List */
+  
   .sidebar {
     width: 30%;
     background-color: #162adffd;
@@ -105,13 +104,17 @@
   
   /* Exam Countdown Section */
   .exam-countdown {
-    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
     background-color: #31a592;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     margin-top: 40px;
+    margin-right: 20px;
   }
   
   .exam-countdown h3 {
@@ -120,8 +123,9 @@
     font-size: 1.5em;
   }
   
-  /* Motivation Section */
-  .motivation {
+  .motivation {    
+    width: 50%;  
+    margin: 100px auto;              
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ddd;

@@ -1,9 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/HomePage.css"
 import FeatureBox from "../components/FeatureBox";
 import { FaClock, FaTrophy, FaList, FaUserGraduate, FaUsers } from "react-icons/fa";
 
 const HomePage=()=>{
+    const navigate = useNavigate();
+
     return(
         <div>
             <nav>
@@ -17,7 +20,9 @@ const HomePage=()=>{
             <div className="hero">
                 <h2>Welcome to The Study Cove</h2>
                 <p>Your virtual study room for collaboration and focus.</p>
-                <button>Create/Join Room</button>
+                <button onClick={() => navigate('/study-room')}>
+                    Study session
+                </button>
             </div>
 
             <div className="features-section">
@@ -25,6 +30,7 @@ const HomePage=()=>{
                     icon={<FaUserGraduate/>}
                     title="Study Individually"
                     description="Focus on your work without distractions."
+                    onClick={() => navigate("/study-room")}
                 />
                 <FeatureBox
                     icon={<FaUsers/>}
