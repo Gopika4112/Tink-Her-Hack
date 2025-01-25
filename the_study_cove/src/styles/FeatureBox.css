@@ -1,0 +1,36 @@
+.feature-box{
+    background: #262626;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 40px;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.feature-box:hover{
+    background: #975e64;
+    transform: translateY(-10px);
+}
+.feature-icon {
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+.feature-box h3{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.feature-box p{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    display: inline-block;
+}

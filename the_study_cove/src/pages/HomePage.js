@@ -1,0 +1,46 @@
+import React from "react";
+import "../styles/HomePage.css"
+import FeatureBox from "../components/FeatureBox";
+import { FaClock, FaTrophy, FaList, FaUserGraduate, FaUsers } from "react-icons/fa";
+
+const HomePage=()=>{
+    return(
+        <div>
+            <nav>
+                <h1>The Study Cove</h1>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+            <div className="hero">
+                <h2>Welcome to The Study Cove</h2>
+                <p>Your virtual study room for collaboration and focus.</p>
+                <button>Create/Join Room</button>
+            </div>
+
+            <div className="features-section">
+                <FeatureBox
+                    icon={<FaUserGraduate/>}
+                    title="Study Individually"
+                    description="Focus on your work without distractions."
+                />
+                <FeatureBox
+                    icon={<FaUsers/>}
+                    title="Study With Friends"
+                    description="Collaborate and learn together in virtual rooms."
+                />
+                <FeatureBox
+                    icon={<FaClock/>}
+                    title="Stay Motivated"
+                    description="Keep yourself on track with Pomodoro Timer, organize your tasks with To-Do List, 
+                    and track your progress with the Leaderboard."
+                />
+                                
+            </div>
+        </div>
+    );
+};
+
+export default HomePage;
