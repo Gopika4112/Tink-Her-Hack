@@ -14,7 +14,9 @@ function App() {
     </Router>
 =======
     <div className="App">
-      <PomodoroTimer/>
+      <HomePage/>
+
+      
     </div>
 >>>>>>> aa86bd2a1d6509a337f89be645839529a2f21147
   );
