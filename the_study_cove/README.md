@@ -66,5 +66,5 @@ Random motivational quote generation and to-do list
 
 ### Project Demo
 # Video
-[]
+https://github.com/Gopika4112/Tink-Her-Hack/blob/main/Tink-Her-Hack_demo.mp4
 *Explain what the video demonstrates*
