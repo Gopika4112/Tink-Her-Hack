@@ -52,7 +52,7 @@ For Software:
    ```
 2. Navigate to the project directory
    ```bash
-   cd tink-her-hack/the_study_cove
+   cd the_study_cove
    ```
 3. Install dependencies
    ```bash
