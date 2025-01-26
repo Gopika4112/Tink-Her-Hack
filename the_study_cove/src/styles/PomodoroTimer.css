@@ -6,9 +6,9 @@
     background-color: #282828; /* Soft purple color */
     color: #FFFFFF; /* White text for contrast */
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    position: fixed; /* Position it in the corner */
-    bottom: 30px;
-    right: 30px;
+    position: absolute; /* Position it inside the study-room container */
+    top: 20px; /* Adjust to the top */
+    right: 20px; /* Adjust to the right */
     text-align: center;
     z-index: 1000; /* Ensure it stays on top */
 }
@@ -41,24 +41,24 @@
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    background-color: #975e64; /* Soft green */
+    background-color: #a97882; /* Soft green */
     color: #FFFFFF;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .buttons button:hover {
-    background-color: #975e64; /* Slightly darker green on hover */
+    background-color: #a97882; /* Slightly darker green on hover */
     transform: translateY(-3px); /* Add a hover effect */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Reset button alternative color */
 .buttons button:nth-child(2) {
-    background-color: #975e64; /* Bright orange for reset */
+    background-color: #a97882; /* Bright orange for reset */
 }
 
 .buttons button:nth-child(2):hover {
-    background-color: #975e64; /* Darker orange on hover */
+    background-color: #a97882; /* Darker orange on hover */
 }
 
 /* Settings section */
@@ -99,7 +99,7 @@
 @media screen and (max-width: 768px) {
     .pomodoro-timer {
         width: 90%; /* Adjust width for smaller screens */
-        bottom: 10px;
+        top: 10px;
         right: 10px;
     }
 
