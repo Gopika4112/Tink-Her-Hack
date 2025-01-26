@@ -1,140 +1,86 @@
-/* Global styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #000000;
-    color: #8bc0bc;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #282828;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
 
-  .container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    max-width: 100%;
-    margin: 0;
-  }
-  
-  .sidebar {
-    width: 30%;
-    background-color: #162adffd;
-    padding: 20px;
-  }
-  
-  .sidebar h2 {
-    margin-bottom: 15px;
-    font-size: 1.5em;
-  }
-  
-  .sidebar input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .sidebar button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .sidebar button:hover {
-    background-color: #45a049;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    margin-top: 15px;
-  }
-  
-  .sidebar li {
-    padding: 10px;
-    background-color: #91d4cf;
-    margin-bottom: 5px;
-    border-radius: 4px;
-  }
-  
-  Main Content Area
-  .main-content {
-    width: 70%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  /* Timer Component */
-  .timer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .timer button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .timer button:hover {
-    background-color: #45a049;
-  }
-  
-  
-  /* Exam Countdown Section */
-  .exam-countdown {
-    padding-top: 5px;
-    padding-bottom: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-    background-color: #31a592;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    margin-top: 40px;
-    margin-right: 20px;
-  }
-  
-  .exam-countdown h3 {
-    margin-bottom: 10px;
-    margin-top: 10px;
-    font-size: 1.5em;
-  }
-  
-  .motivation {    
-    width: 50%;  
-    margin: 100px auto;              
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .motivation h3 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-  }
-  
+.study-room-container {
+  display: flex;
+  height: 100vh;
+}
+
+.todo-section {
+  width: 400px; /* Adjust width as needed */
+  background-color: #282828;
+  color: #a97882;
+  padding: 20px;
+  overflow-y: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: grid;
+  grid-template-areas: 
+    "timer quotes"
+    "timer countdown";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Styles for centering quote at absolute center of page without affecting todo */
+.quotes-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* This ensures that the quote is centered */
+  width: 100%; /* You can adjust the width */
+  max-width: 500px; /* Maximum width for the square box */
+  /* background-color: rgba(255, 255, 255, 0.1); Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #a97882;
+  font-size: 35px;
+  font-style: italic;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+}
+
+.timer-section {
+  grid-area: timer;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exam-countdown-section {
+  grid-area: countdown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #a97882;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cc9da7;
+}
