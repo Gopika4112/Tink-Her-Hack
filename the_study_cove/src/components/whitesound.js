@@ -36,7 +36,10 @@ const WhiteNoisePlayer = () => {
       <audio
         ref={audioRef}
         loop
-        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" // Test with a known working audio source
+        src="https://www.fesliyanstudios.com/play-mp3/700
+
+
+" // Test with a known working audio source
       ></audio>
       <div style={{ margin: "10px 0" }}>
         <button
