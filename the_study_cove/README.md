@@ -67,4 +67,10 @@ Random motivational quote generation and to-do list
 ### Project Demo
 # Video
 https://github.com/Gopika4112/Tink-Her-Hack/blob/main/Tink-Her-Hack_demo.mp4
-*Explain what the video demonstrates*
+The link opens to the home page which entails the various features that the website supports and an option to start a study session.On clicking the study session button, we navigate to the study room. The study room has several impressive features as follows:
+1. A to-do list : Tasks can be added, kept track of and removed.
+2. Pomodoro Timer: A customizable pomodoro timer.
+3. Exam Countdown: On entering the date of an exam, it displays the number of days left for you to ace the exam.
+4. Focus Music: The study session experience can be enhanced with soothing music that relieve stress.
+5. Random Motivational Quotes Generator: Every minute, a new motivational quote is generated to keep you hanging in there.
+   
