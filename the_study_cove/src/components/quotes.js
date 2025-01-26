@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 const DailyQuote = () => {
-  // Array of study-related quotes
   const quotes = [
     "Success is the sum of small efforts, repeated day in and day out. – Robert Collier",
     "Don’t watch the clock; do what it does. Keep going. – Sam Levenson",
@@ -16,48 +15,24 @@ const DailyQuote = () => {
   ];
 
   const [currentQuote, setCurrentQuote] = useState("");
-  const [index, setIndex] = useState(0); // State for the current quote index
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    // Set the initial quote
     setCurrentQuote(quotes[index]);
-
-    // Update the quote every minute
     const intervalId = setInterval(() => {
       setIndex((prevIndex) => {
-        const nextIndex = (prevIndex + 1) % quotes.length; // Increment and wrap around
-        setCurrentQuote(quotes[nextIndex]); // Update the quote
-        return nextIndex; // Update the index state
+        const nextIndex = (prevIndex + 1) % quotes.length;
+        setCurrentQuote(quotes[nextIndex]);
+        return nextIndex;
       });
-    }, 60000); // 1 minute
+    }, 60000);
 
-    // Cleanup on component unmount
     return () => clearInterval(intervalId);
-  }, [quotes]); // Effect depends on the quotes array
+  }, [quotes]);
 
   return (
-    
-    <div
-      style={{
-        maxWidth: "400px",
-        margin: "20px auto",
-        textAlign: "center",
-        padding: "20px",
-        border: "1px solid #ddd",
-        borderRadius: "8px",
-        backgroundColor: "#f9f9f9",
-        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-      }}
-    >
-      <p
-        style={{
-          fontSize: "18px",
-          fontStyle: "italic",
-          color: "#555",
-        }}
-      >
-        "{currentQuote}"
-      </p>
+    <div className="quotes-section">
+      <p>"{currentQuote}"</p>
     </div>
   );
 };
