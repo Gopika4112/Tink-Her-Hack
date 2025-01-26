@@ -53,7 +53,7 @@ npm run build
 ### Project Documentation
 For Software:
 
-# Screenshots (Add at least 3)
+# Screenshots
 ![Home Page](https://github.com/user-attachments/assets/1da60d4b-d479-42b2-aac7-338fb6d3f428)
 Landing page which shows the various features of the website and navigates to the study room.
 
@@ -66,5 +66,5 @@ Random motivational quote generation and to-do list
 
 ### Project Demo
 # Video
-[Add your demo video link here]
+[]
 *Explain what the video demonstrates*
