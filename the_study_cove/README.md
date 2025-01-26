@@ -22,10 +22,10 @@ Students and professionals often struggle with maintaining focus, organizing the
 ### The Solution
 Here's how we're tackling the chaos of studying:
 
-⏳ Pomodoro Timer: Say goodbye to burnout! Work in focused sprints with refreshing breaks in between—your brain will thank you.
-✅ To-Do List: No more sticky notes everywhere! Keep track of your tasks and feel the joy of checking them off one by one.
-📅 Exam Countdown: Deadlines sneaking up on you? Not anymore! Our countdown keeps you on your toes and ahead of the game.
-🌟 Motivational Quotes: Need a little push? We've got daily doses of inspiration to keep your spirits high and your motivation soaring.
+-⏳ Pomodoro Timer: Say goodbye to burnout! Work in focused sprints with refreshing breaks in between—your brain will thank you.
+- To-Do List: No more sticky notes everywhere! Keep track of your tasks and feel the joy of checking them off one by one.
+-📅 Exam Countdown: Deadlines sneaking up on you? Not anymore! Our countdown keeps you on your toes and ahead of the game.
+-🌟 Motivational Quotes: Need a little push? We've got daily doses of inspiration to keep your spirits high and your motivation soaring.
 
 ## Technical Details
 ### Technologies/Components Used
