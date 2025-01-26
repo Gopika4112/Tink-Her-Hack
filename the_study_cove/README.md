@@ -38,13 +38,18 @@ For Software:
 ### Implementation
 For Software:
 # Installation
+```bash
 npx create-react-app the_study_cove
 cd the_study_cove
+```
 
 # Run
+```bash
 npm start
+```
+```bash
 npm run build
-
+```
 ### Project Documentation
 For Software:
 
