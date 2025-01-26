@@ -48,6 +48,7 @@ const PomodoroTimer = () => {
 
     useEffect(() => {
         let interval = null;
+        let studyTimeIncrement=0;
 
         if (isActive) {
             interval = setInterval(() => {
@@ -57,14 +58,19 @@ const PomodoroTimer = () => {
                         setIsBreak(!isBreak);
                         return isBreak ? parseInt(workDuration) * 60 : parseInt(breakDuration) * 60;
                     }
-                    if(!isBreak){
-                        setStudyTime((prevStudyTime)=>{
-                            const updatedTime=prevStudyTime+1;
-                            saveStudyTime(updatedTime);
-                            return updatedTime;
-                        });
+                    
+                    if(prevTime>0 && !isBreak){
+                        studyTimeIncrement++;
+                        if(studyTimeIncrement===1){
+                                setStudyTime((prevStudyTime)=>{
+                                    const newTime=prevStudyTime+1;
+                                    saveStudyTime(newTime);
+                                    return newTime;
+                                });
+                                studyTimeIncrement=0;
+                        }
                     }
-                    return prevTime - 1;
+                    return prevTime-1;
                 });
             }, 1000);
         } else {
@@ -80,6 +86,12 @@ const PomodoroTimer = () => {
         const seconds = timeInSeconds % 60;
         return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
     };
+
+    const formatStudyTime=(timeInSeconds)=>{
+        const minutes=Math.floor((timeInSeconds%3600)/60);
+        const seconds=timeInSeconds%60;
+        return `${minutes}m ${seconds}s`
+    }
     const saveStudyTime=(time)=>{
         const today=new Date().toISOString().split("T")[0];
         localStorage.setItem("studyTimeToday",JSON.stringify({date:today, time}));
@@ -87,7 +99,7 @@ const PomodoroTimer = () => {
 
     return (
         <div className="pomodoro-timer">
-            <h2>{isBreak ? "Break Time" : "Work Time"}</h2>
+            <h2>{isBreak ? "Break Time" : "Study Time"}</h2>
 
             {/* Display Timer */}
             <div className="timer-display">
