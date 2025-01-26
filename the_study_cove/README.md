@@ -54,18 +54,14 @@ npm run build
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Home Page](https://github.com/user-attachments/assets/1da60d4b-d479-42b2-aac7-338fb6d3f428)
+Landing page which shows the various features of the website and navigates to the study room.
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![Study Room timer feature](https://github.com/user-attachments/assets/b471b87f-ec61-48f7-8a4f-42869887e47f)
+Study room with pomodoro timer and exam countdown features
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+![Screenshot 2025-01-26 100735](https://github.com/user-attachments/assets/ebafbb59-624e-4512-9e86-81f857d575e0)
+Random motivational quote generation and to-do list
 
 
 ### Project Demo
