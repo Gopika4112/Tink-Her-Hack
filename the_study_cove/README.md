@@ -67,7 +67,7 @@ npm start
 npm run build
 ```
 ### Project Documentation
-For Software:
+
 
 # Screenshots
 ![Home Page](https://github.com/user-attachments/assets/1da60d4b-d479-42b2-aac7-338fb6d3f428)
