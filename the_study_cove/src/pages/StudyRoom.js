@@ -4,6 +4,7 @@ import Quotes from '../components/Quotes';
 import ExamDayCounter from '../components/ExamDayCounter';
 import PomodoroTimer from '../components/PomodoroTimer';
 import '../styles/StudyRoom.css';
+import WhiteNoisePlayer from '../components/whitesound';
 
 const StudyRoom = () => {
   return (
@@ -21,6 +22,9 @@ const StudyRoom = () => {
 
         <div className="exam-countdown-section">
           <ExamDayCounter />
+        </div>
+        <div className="white-noise">
+          <WhiteNoisePlayer/>
         </div>
       </div>
     </div>
