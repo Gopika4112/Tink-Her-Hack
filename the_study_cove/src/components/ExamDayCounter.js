@@ -19,37 +19,58 @@ const ExamDayCounter = () => {
 
   return (
     <div style={{ maxWidth: "400px", margin: "20px auto", textAlign: "center" }}>
-      <h2>Exam Day Counter</h2>
-      <input
-        type="date"
-        value={examDate}
-        onChange={(e) => setExamDate(e.target.value)}
-        style={{
-          padding: "8px",
-          fontSize: "16px",
-          margin: "10px 0",
-          width: "100%",
-        }}
-      />
-      <button
-        onClick={() => setExamDate("")}
-        style={{
-          padding: "8px 16px",
-          backgroundColor: "#007bff",
-          color: "#fff",
-          border: "none",
-          borderRadius: "4px",
-          cursor: "pointer",
-        }}
-      >
-        Clear
-      </button>
-      {daysLeft !== null && (
-        <p style={{ marginTop: "20px", fontSize: "18px" }}>
-          {daysLeft > 0
-            ? `Days left until the exam: ${daysLeft}`
-            : "The exam date has passed or is today!"}
+      {daysLeft === null ? (
+        <p style={{ marginBottom: "10px", fontSize: "18px" }}>
+          Enter your exam date:
         </p>
+      ) : (
+        <>
+          <p
+            style={{
+              fontSize: "30px",
+              fontWeight: "bold",
+              color: "#a97882",
+              margin: "5px 0",
+            }}
+          >
+            Exam in
+          </p>
+          <p
+            style={{
+              fontSize: "70px",
+              fontWeight: "bold",
+              color: "#a97882",
+              margin: "5px 0",
+            }}
+          >
+            {daysLeft > 0 ? daysLeft : "0"}
+          </p>
+          <p
+            style={{
+              fontSize: "30px",
+              fontWeight: "bold",
+              color: "#a97882",
+              margin: "5px 0",
+            }}
+          >
+            {daysLeft === 1 ? "day" : "days"}
+          </p>
+        </>
+      )}
+
+      {/* Only show input if no exam date has been selected yet */}
+      {daysLeft === null && (
+        <input
+          type="date"
+          value={examDate}
+          onChange={(e) => setExamDate(e.target.value)}
+          style={{
+            padding: "8px",
+            fontSize: "16px",
+            margin: "10px 0",
+            width: "100%",
+          }}
+        />
       )}
     </div>
   );
