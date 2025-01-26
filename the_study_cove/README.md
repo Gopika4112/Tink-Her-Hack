@@ -44,7 +44,7 @@ For Software:
 - VS Code (for development),Git (for version control),GitHub (for code collaboration and version control),Node.js (to run your backend server)
 
 ### Implementation
-For Software:
+
 # Installation
 1. Clone the repository:
    ```bash
