@@ -11,11 +11,6 @@ const HomePage=()=>{
         <div>
             <nav>
                 <h1>The Study Cove</h1>
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                </ul>
             </nav>
             <div className="hero">
                 <h2>Welcome to The Study Cove</h2>
