@@ -1,147 +1,179 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background: #dadedf;
-    color: hsl(200, 78%, 35%);
-    padding: 1rem;
-  }
-  
-  .new-item-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 10%;
-  }
-  
-  .form-row {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-  
-  .btn {
-    background: hsla(184, 46%, 56%, 0.1);
-    border: 1px solid hsl(162, 49%, 36%);
-    color: hsl(162, 60%, 30%);
-    padding: 0.25em 0.5em;
-    margin-bottom: 5%;
-    border-radius: 0.25em;
-    cursor: pointer;
-    outline: none;
-  }
-  
-  .btn:hover,
-  .btn:focus-visible {
-    background: hsla(159, 36%, 41%, 0.2);
-  }
-  
-  .btn.btn-danger {
-    background: hsl(0, 100%, 40%, 0.1);
-    border: 1px solid hsl(0, 100%, 40%);
-    color: hsl(0, 100%, 40%);
-  }
-  
-  .btn.btn-danger:hover,
-  .btn.btn-danger:focus-visible {
-    background: hsl(0, 100%, 40%, 0.2);
-  }
-  
-  .new-item-form input {
-    outline: none;
-    border: 2px solid hsl(200, 100%, 40%);
-    background: hsl(162, 43%, 46%);
-    border-radius: 0.25em;
-    padding: 0.5em 0.75em;
-    color: hsl(200, 100%, 90%);
-  }
-  
-  .new-item-form input:focus {
-    border: 1px solid hsl(200, 100%, 70%);
-  }
-  
-  .header {
-    font-weight:lighter;
-    font-size: 1rem;
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-  
-  .list {
-    margin: 0;
-    padding: 0;
-    margin-left: 1rem;
-    list-style: none;
-  }
-  
-  .list li:has(input:checked) label {
-    color: hsl(165, 20%, 40%);
-  }
-  
-  .list {
-    width: 100%; 
-    max-width: 600px;
-    margin: 0 auto; 
-    padding: 1rem; 
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; 
-  }
-  
-  
-  .list li {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    font-size: 1.5 rem;
-  }
-  
-  .list li label {
-    display: flex;
-    gap: 0.25rem;
-    cursor: pointer;
-    align-items: center;
-  }
-  
-  .list li:has(input:focus-visible) label {
-    outline: 1px solid hsl(200, 100%, 50%);
-  }
-  
-  .list li input {
-    outline:#dadedf;
-    width:auto;
-    height:auto;
-    appearance:none;
-    pointer-events: none;
-    position: absolute;
-  }
-  
-  .list li label::before {
-    content: "";
-    display: block;
-    width: 2 rem;
-    height: 2 rem;
-    background: hsl(155, 100%, 90%);
-    border-radius: 0.25em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .list li label:hover::before {
-    background: hsl(200, 100%, 80%);
-  }
-  
-  .list li:has(input:checked) label::before {
-    content: "✔";
-    background: hsl(200, 100%, 40%);
-    color: hsl(200, 100%, 90%);
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  
-  .list li:has(input:checked) label:hover::before {
-    background: hsl(200, 100%, 30%);
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #282828;
+  margin: 0;
+  padding: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  height: 100vh;
+}
+
+.study-room-container{
+  display: flex;
+  height: 100vh;
+}
+.todo-section {
+  width: 400px;
+  background-color: #282828;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Container Styles */
+.todo-container {
+  background-color: #282828;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Completed Header */
+.completed-header {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  color: #a97882;
+}
+
+/* Todo List Styles */
+.list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.no-todos {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* Todo Item Styles */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+li label {
+  flex-grow: 1;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  background-color: white;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 3px;
+}
+
+/* Styling the checkbox when checked */
+input[type="checkbox"]:checked {
+  background-color: #a97882;
+  border-color: #a97882;
+}
+
+/* Centering and styling the pink tick mark */
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Strikethrough completed tasks */
+li.completed label {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Todo Item Delete Button */
+button.btn-danger {
+  background-color: #cc9da7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+button.btn-danger:hover {
+  background-color: #cc9da7;
+}
+
+/* Add New Item Button */
+.add-item-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #a97882;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-item-btn:hover {
+  background-color: #cc9da7;
+}
+
+/* New Todo Input Field */
+.new-todo-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.new-todo-input input {
+  width: 80%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.new-todo-input button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #a97882;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.new-todo-input button:hover {
+  background-color: #cc9da7;
+}
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+}
