@@ -9,6 +9,7 @@ import WhiteNoisePlayer from '../components/whitesound';
 const StudyRoom = () => {
   return (
     <div className="study-room-container">
+      <h1 className='heading'>LET'S GET TO IT!</h1>
       <div className="todo-section">
         <ToDo />
       </div>

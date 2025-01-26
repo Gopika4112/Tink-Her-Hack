@@ -13,6 +13,7 @@ body {
   display: flex;
   height: 100vh;
 }
+
 .todo-section {
   width: 400px;
   background-color: #282828;
@@ -27,9 +28,13 @@ body {
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
-
+.todo-container:hover {
+  transform: translateY(-5px); /* Add a slight hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
 /* Header Styles */
 .header {
   text-align: center;

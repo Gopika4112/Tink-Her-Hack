@@ -27,6 +27,7 @@ const WhiteNoisePlayer = () => {
           bottom: "20px",
           right: "20px",
           padding: "10px 20px",
+          margin:"0 100px",
           backgroundColor: "#a97882",
           color: "#fff",
           border: "none",
